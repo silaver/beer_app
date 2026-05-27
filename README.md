@@ -1,17 +1,34 @@
-# beer_app
+# Beer App
 
-A new Flutter project.
+Beer App is a simple Flutter mobile application for finding and sharing beer prices by venue.
+
+The main idea is to let users search for a place, see available beer prices, and add or update prices if they are missing or outdated.
+
+## Features
+
+- Search venues
+- View beer prices by venue
+- Add new beer prices
+- Update existing prices
+- Keep a personal beer log
+- Track contribution and beer log points
+
+## Planned Features
+
+- Map-based venue selection
+- QR menu/photo support
+- User profiles
+- Badges and achievements
+- Social/contribution system
+
+## Tech Stack
+
+- Flutter
+- Dart
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Clone the project:
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```bash
+git clone https://github.com/silaver/beer_app.git
