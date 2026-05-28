@@ -30,6 +30,38 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   int currentIndex = 1;
 
+  void _showAddPriceOptions() {
+    showModalBottomSheet(
+      context: context,
+      builder: (context) {
+        return Container(
+          padding: const EdgeInsets.all(16),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              ListTile(
+                leading: const Icon(Icons.qr_code),
+                title: const Text('QR ile Ekle'),
+                onTap: () {
+                  // Bira ekleme işlemi
+                  Navigator.pop(context);
+                },
+              ),
+              ListTile(
+                leading: const Icon(Icons.edit),
+                title: const Text('Manuel Ekle'),
+                onTap: () {
+                  // Mekan ekleme işlemi
+                  Navigator.pop(context);
+                },
+              ),
+            ],
+          ),
+        );
+      },
+    );
+  }
+
   final List<Widget> pages = const [
     SocialScreen(),
     PriceFinderScreen(),
@@ -42,9 +74,7 @@ class _MainScreenState extends State<MainScreen> {
       body: pages[currentIndex],
       floatingActionButton: currentIndex == 1
           ? FloatingActionButton(
-              onPressed: () {
-                //EKLENECEK
-              },
+              onPressed: _showAddPriceOptions,
               child: const Icon(Icons.add),
             )
           : null,
