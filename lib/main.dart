@@ -40,6 +40,14 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: pages[currentIndex],
+      floatingActionButton: currentIndex == 1
+          ? FloatingActionButton(
+              onPressed: () {
+                //EKLENECEK
+              },
+              child: const Icon(Icons.add),
+            )
+          : null,
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: currentIndex,
         onTap: (index) {
@@ -77,8 +85,15 @@ class PriceFinderScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text('Orta Tab', style: TextStyle(fontSize: 24)),
+    return Center(
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          const Text('Fiyatlar', style: TextStyle(fontSize: 24)),
+          const SizedBox(height: 16),
+          ElevatedButton(onPressed: () {}, child: const Text('Fiyat Ekle')),
+        ],
+      ),
     );
   }
 }
