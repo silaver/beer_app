@@ -88,11 +88,7 @@ class PriceFinderScreen extends StatelessWidget {
     return Center(
       child: Column(
         mainAxisSize: MainAxisSize.min,
-        children: [
-          const Text('Fiyatlar', style: TextStyle(fontSize: 24)),
-          const SizedBox(height: 16),
-          ElevatedButton(onPressed: () {}, child: const Text('Fiyat Ekle')),
-        ],
+        children: [const Text('Orta Tab', style: TextStyle(fontSize: 24))],
       ),
     );
   }
